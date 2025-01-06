@@ -1,0 +1,11 @@
+.header{
+    border-bottom: 1px solid #fff;
+    height: 10vh;
+}
+
+.nav_container_items{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}

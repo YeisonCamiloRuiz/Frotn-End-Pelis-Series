@@ -1,0 +1,44 @@
+.btn_primaty{
+    width: auto;
+    height: auto;
+    padding: 1em 1.5em;
+    margin: 0.5px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.2s ease-in-out; 
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 16px;
+}
+
+.btn_primaty:active {
+    transform: scale(0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn_primaty:hover{
+    background: rgb(254, 139, 100);
+}
+
+
+.solid{
+    background: var(--primary-color);
+}
+
+.clear{
+    background: #fd3f0023;
+    color: var(--background);
+}
+
+.clear:hover{
+    background: #fcbba4;
+}
+
+.out_line{
+    border: 1px solid var(--primary-color);
+    color: var(--background);
+}
