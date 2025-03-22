@@ -1,0 +1,37 @@
+.container_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+}
+
+.container_form form{
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(254, 254, 254, 0.327);
+    justify-content: space-evenly;
+}
+
+
+.form_step {
+    display: none;
+    visibility: hidden;
+    transform: translateX(-50px);
+    transition: all 0.3s ease-in-out;
+}
+
+.form_step.active {
+    display: flex;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.container_form_step{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}

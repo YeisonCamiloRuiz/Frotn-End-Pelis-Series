@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+}
+
+.container_form{
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(254, 254, 254, 0.327);
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.container_form p{
+    text-align: center;
+    margin: 1rem 0;
+
+}
+
+.container_form form{
+    box-shadow: none;
+}

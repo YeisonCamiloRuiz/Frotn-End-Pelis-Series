@@ -33,3 +33,7 @@
     height: 3rem;
     max-height: 3.5rem;
 }
+
+.error{
+    border: 1px solid var(--color-error);
+}

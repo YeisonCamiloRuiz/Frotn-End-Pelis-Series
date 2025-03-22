@@ -2,4 +2,52 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.container_form form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(254, 254, 254, 0.327);;
+}
+
+.text_recovery_password{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text_recovery_password a {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.text_recovery_password a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.text_recovery_password a:hover::after {
+    width: 100%;
+}
+
+.text_recovery_password a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.text_recovery_password a:hover{
+    transition: 0.3s;
 }

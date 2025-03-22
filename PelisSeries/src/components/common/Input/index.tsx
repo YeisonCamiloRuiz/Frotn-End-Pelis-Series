@@ -1,27 +1,6 @@
+import { InputProps } from "../../../interfaces/components/IInput";
 import styles from "../Input/styles.module.css";
 
-export interface InputProps {
-    accesskey: string;
-    value?: string;
-    placeHolder: string;
-    type: "text" | "number" | "email" | "password" | "select" | "radio" | "checkBox";
-    options?: Option[];
-    id: string;
-    disabled?: boolean;
-    readonly?: boolean;
-    required?: boolean;
-    pattern?: string;
-    className?: string;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
-    onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
-    onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
-    autoFocus?: boolean;
-}
-
-interface Option {
-    label: string;
-    value: string;
-}
 
 const Input = ({
     accesskey,
@@ -60,7 +39,6 @@ const Input = ({
                         className={className ? styles[className] + " " + styles.input_default : styles.input_default}
                         readOnly={readonly}
                         disabled={disabled}
-                        
                     />
                 )
             case "select":

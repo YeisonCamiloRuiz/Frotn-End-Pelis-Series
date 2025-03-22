@@ -7,6 +7,7 @@ export interface ButtonProps{
     className?:"clear" | "solid" | "out_line";
     customClass?:string;
     icon?:string;
+    disabled?:boolean;
     slotIcon?:"left" | "right" | "icon-only";
     fuction?:() => void;
 }
