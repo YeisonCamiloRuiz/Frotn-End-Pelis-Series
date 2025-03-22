@@ -1,0 +1,35 @@
+.input_default {
+    width: 100%;
+    max-height: 3rem;
+    height: 40px;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    border: 1px solid var(--secondaty-text);
+    background-color: var(--background);
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input_default:focus {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.input_default::placeholder {
+    color: var(--secondaty-text);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.input_default:active {
+    background-color: #333333;
+    border-color: var(--primary-color);
+}
+
+.input_login{
+    border-radius: 30px;
+    height: 3rem;
+    max-height: 3.5rem;
+}

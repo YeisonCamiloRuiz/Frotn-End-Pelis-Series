@@ -2,4 +2,15 @@
     width: 16px;
     height: auto;
 }
+
+.icon div{
+    display: flex;
+}
   
+
+.container-view{
+    position: relative;
+    max-width: 900px;
+    min-width: 300px;
+    margin: 0 auto;
+}

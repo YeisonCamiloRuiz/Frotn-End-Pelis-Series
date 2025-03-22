@@ -4,12 +4,11 @@ import { ReactSVG } from 'react-svg';
 
 
 
-const Button = ({children,label,className = "solid",customClass = "",icon,slotIcon = "left", fuction}:ButtonProps) => {
-    
+const Button = ({children,label,className = "solid",customClass = "",icon,slotIcon = "left", type,fuction}:ButtonProps) => {
     const renderIcon = icon ? <ReactSVG src={icon} className="icon" /> : null;
 
     return(
-        <button onClick={fuction} className={`${styles.btn_primaty} ${styles[className]} ${customClass}` }>
+        <button type={type} onClick={fuction} className={`${styles.btn_primaty} ${styles[className]} ${styles[customClass]}` }>
             {slotIcon === "left" && renderIcon}
             {children || label}
             {slotIcon === "right" && renderIcon}
