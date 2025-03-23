@@ -1,47 +1,38 @@
 import { useState } from "react";
+import { useAuth } from "./useAuth";
 
 export const useRegister = () => {
     const [step, setStep] = useState(1);
-    const [formData, setFormData] = useState({
+    const [errors] = useState<Record<string, string>>({});
+    const [formData, setFormData] = useState<{
+        name: string;
+        phone: string;
+        email: string;
+        password: string;
+        confirmPassword?: string;
+    }>({
         name: "",
         phone: "",
         email: "",
         password: "",
         confirmPassword: "",
     });
-    const [errors, setErrors] = useState<Record<string, string>>({});
-
-    const validateStep = (fields: Record<string, string>) => {
-        const newErrors: Record<string, string> = {};
-        
-        Object.keys(fields).forEach((key) => {
-            if (!fields[key].trim()) {
-                newErrors[key] = "Este campo es obligatorio";
-            }
-        });
-
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
-    };
+    const { register } = useAuth();
 
     const nextStep = (data: Record<string, string>) => {
-        if (!validateStep(data)) return;
-        
         setFormData((prev) => ({ ...prev, ...data }));
-        setErrors({}); // Limpia errores al avanzar
         setStep(2);
     };
 
     const prevStep = () => {
         setStep(1);
-        setErrors({}); // Limpia errores al retroceder
     };
 
     const handleSubmit = async (data: Record<string, string>) => {
-        if (!validateStep(data)) return;
-
         setFormData((prev) => ({ ...prev, ...data }));
-        console.log("Formulario enviado:", { ...formData, ...data });
+        const formData1 = { ...formData, ...data };
+        delete formData1.confirmPassword;
+        await register(formData1);
     };
 
     return { step, formData, errors, nextStep, prevStep, handleSubmit };
